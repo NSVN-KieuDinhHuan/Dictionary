@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Từ điển</title>
+</head>
+<body>
+<div>
+
+    <input id="word">
+    <button onclick="tratu()"> Tra từ </button>
+</div>
+<br>
+<p id="print"></p>
+<script>
+ function tratu() {
+    let English=["about","able","crazy","experience"]
+    let tiengviet=["Về, khoảng","Có thể","Điên khùng","Kinh nghiệm"]
+     let word=document.getElementById("word").value.toString()
+    for (i=0;i<English.length;i++) {
+        if ( word===English[i]) {
+            document.getElementById("print").innerHTML="Nghĩa là: "+tiengviet[i];
+        }
+
+    }
+ }
+
+</script>
+</body>
+</html>
